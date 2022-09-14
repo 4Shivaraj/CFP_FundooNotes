@@ -3,3 +3,11 @@
 
 2022-09-12 23:34:27,192 (auth models) DEBUG  User vinayak registred successfully
 2022-09-12 23:34:48,767 (auth models) DEBUG User vinayak logged in successfully 
+
+2022-09-13 22:42:44,821 (customised auth models) DEBUG  User shivaraj registered successfully
+2022-09-13 22:44:54,315 (customised auth models) DEBUG User shivaraj logged in successfully
+
+
+2022-09-14 11:49:26,242 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
+2022-09-14 11:50:08,678 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
+2022-09-14 11:50:18,562 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
