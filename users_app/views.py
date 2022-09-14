@@ -1,12 +1,11 @@
-from telnetlib import STATUS
 from django.http import JsonResponse
-from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.forms import model_to_dict
 from notes_log import get_logger
+from .models import User
 import json
 
-lg = get_logger(name="(auth models)", file_name="notes_log.log")
+lg = get_logger(name="(customised auth models)", file_name="notes_log.log")
 
 
 def registration(request):
@@ -21,10 +20,13 @@ def registration(request):
     try:
         if request.method == "POST":
             data = json.loads(request.body)
-            user_details = User.objects.create_user(username=data.get("user_name"), password=data.get("pass_word"), email=data.get(
-                "email"))
+            user_details = User.objects.create_user(username=data.get("user_name"),
+                                                    password=data.get("pass_word"),
+                                                    email=data.get("email"),
+                                                    phone_number=data.get("phone_number"),
+                                                    location=data.get("location"))
             lg.debug(f" User {user_details.username} registered successfully")
-            return JsonResponse({"message": "registred successfully", "data": model_to_dict(user_details)})
+            return JsonResponse({"message": "registered successfully", "data": model_to_dict(user_details)})
         else:
             lg.info("Invalid HTTP method")
             return JsonResponse({"message": "Invalid HTTP method"}, status=500)
@@ -38,7 +40,7 @@ def login(request):
     """login to the user app, method must be POST
 
     Args:
-        request : accepting the request load the body with user name and pass word
+        request : accepting the request load the body with user-name and pass word
 
     Returns:
         returning json response with success message
@@ -47,8 +49,8 @@ def login(request):
         if request.method == "POST":
 
             data = json.loads(request.body)
-            login_details = authenticate(username=data.get(
-                "user_name"), password=data.get("pass_word"))
+            login_details = authenticate(username=data.get("user_name"),
+                                         password=data.get("pass_word"))
             if login_details is not None:
                 lg.debug(
                     f"User {login_details.username} logged in successfully")
