@@ -10,3 +10,10 @@
 2022-09-14 23:59:32,576 (Class Based view with serialisation) DEBUG User chethana logged in successfully
 2022-09-15 00:00:25,588 (Class Based view with serialisation) DEBUG User chethana logged in successfully
 
+2022-09-15 17:01:07,204 (CRUD Operation for Note) INFO {'id': 3, 'title': 'paracetomal', 'description': 'description-3', 'user': 3}
+2022-09-15 17:01:07,207 (CRUD Operation for Note) DEBUG {'message': 'Note created successfully'}
+2022-09-15 17:02:13,397 (CRUD Operation for Note) INFO [OrderedDict([('id', 3), ('title', 'paracetomal'), ('description', 'description-3'), ('user', 3)])]
+2022-09-15 17:02:13,398 (CRUD Operation for Note) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-15 17:02:49,973 (CRUD Operation for Note) INFO {'id': 3, 'title': 'para-cetomaol-updated', 'description': 'description-updated', 'user': 3}
+2022-09-15 17:02:49,974 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
+2022-09-15 17:03:08,006 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}
