@@ -1,65 +1,59 @@
-from django.http import JsonResponse
 from django.contrib.auth import authenticate
-from django.forms import model_to_dict
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.views import APIView
+from .serializers import UserSerializer
 from notes_log import get_logger
-from .models import User
-import json
 
-lg = get_logger(name="(customised auth models)", file_name="notes_log.log")
+lg = get_logger(name="(Class Based view with serialisation)",
+                file_name="notes_log.log")
 
 
-def registration(request):
-    """registering user details to the database, method must be POST
-
-    Args:
-        request : accepting the request, and load the body with user details in a postman
-
-    Returns:
-        returning json response with success message
+class UserRegistration(APIView):
     """
-    try:
-        if request.method == "POST":
-            data = json.loads(request.body)
-            user_details = User.objects.create_user(username=data.get("user_name"),
-                                                    password=data.get("pass_word"),
-                                                    email=data.get("email"),
-                                                    phone_number=data.get("phone_number"),
-                                                    location=data.get("location"))
-            lg.debug(f" User {user_details.username} registered successfully")
-            return JsonResponse({"message": "registered successfully", "data": model_to_dict(user_details)})
-        else:
-            lg.info("Invalid HTTP method")
-            return JsonResponse({"message": "Invalid HTTP method"}, status=500)
-
-    except Exception as e:
-        lg.error(e)
-        return JsonResponse({"message": str(e)}, status=400)
-
-
-def login(request):
-    """login to the user app, method must be POST
-
-    Args:
-        request : accepting the request load the body with user-name and pass word
-
-    Returns:
-        returning json response with success message
+    inheriting from APIView class this class allows you to access below methods, overiding post method
     """
-    try:
-        if request.method == "POST":
 
-            data = json.loads(request.body)
-            login_details = authenticate(username=data.get("user_name"),
-                                         password=data.get("pass_word"))
+    def post(self, request):
+        """
+        Args:
+            request: accepting the user details from client server or postman
+        Returns:
+            response with success message
+        """
+        try:
+            serializer = UserSerializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            serializer.save()  # serializing the data after validation
+            return Response({"message": "Registered successfully", "data": serializer.data},
+                            status=status.HTTP_201_CREATED)  # serializer.data is used for de-serializer
+
+        except Exception as e:
+            lg.error(e)
+            return Response({"message": str(e)}, status=400)
+
+
+class UserLogin(APIView):
+    """
+    inheriting from APIView class
+    """
+
+    def post(self, request):
+        """
+        Args:
+            request: accepting the user details from client server or postman
+        Returns:
+            response with success message
+        """
+        try:
+            login_details = authenticate(**request.data)
             if login_details is not None:
                 lg.debug(
                     f"User {login_details.username} logged in successfully")
-                return JsonResponse({"message": f"{login_details.username} logged in successfully"})
+                return Response({"message": f"{login_details.username} logged in successfully"},
+                                status=status.HTTP_202_ACCEPTED)
             else:
-                return JsonResponse({"message": "Invalid Credentials"}, status=400)
-        else:
-            return JsonResponse({"message": "Invalid HTTP method"}, status=500)
-
-    except Exception as e:
-        lg.error(e)
-        return JsonResponse({"message": str(e)}, status=400)
+                return Response({"message": "Invalid Credentials"}, status=400)
+        except Exception as e:
+            lg.error(e)
+            return Response({"message": str(e)}, status=400)
