@@ -4,9 +4,22 @@ from rest_framework.views import APIView
 from .models import Notes
 from .serializers import NotesSerializers
 from notes_log import get_logger
+from users_app.jwt_service import JwtService
 
 lg = get_logger(name="(CRUD Operation for Note)",
                 file_name="notes_log.log")
+
+
+def verify_token(request):
+    token = request.headers.get("Token")
+    if not token:
+        raise Exception("Token is invalid")
+    decode = JwtService().decode(token=token)
+    user_id = decode.get("user_id")
+    if not user_id:
+        raise Exception("Invalid user")
+    request.data.update({"user": user_id})
+    return request.data
 
 
 class NoteAV(APIView):
@@ -22,6 +35,7 @@ class NoteAV(APIView):
             response with success message
         """
         try:
+            verify_token(request)
             serializer = NotesSerializers(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
@@ -42,6 +56,7 @@ class NoteAV(APIView):
             response with success message
         """
         try:
+            verify_token(request)
             notes = Notes.objects.filter(user_id=request.data.get("user"))
             serializer = NotesSerializers(notes, many=True)
             lg.info(serializer.data)
@@ -61,6 +76,7 @@ class NoteAV(APIView):
             response with success message
         """
         try:
+            verify_token(request)
             notes_obj = Notes.objects.get(id=request.data.get("id"))
             serializer = NotesSerializers(notes_obj, data=request.data)
             serializer.is_valid(raise_exception=True)
@@ -82,6 +98,7 @@ class NoteAV(APIView):
             response with success message
         """
         try:
+            verify_token(request)
             notes_obj = Notes.objects.get(id=request.data.get("id"))
             notes_obj.delete()
             lg.debug({"message": "Note deleted successfully"})
