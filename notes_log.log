@@ -25,3 +25,12 @@
 2022-09-20 23:58:45,258 (CRUD Operation for Note) INFO {'id': 4, 'title': '+time_table-updated', 'description': '+description-updated', 'user': 32}
 2022-09-20 23:58:46,018 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
 2022-09-21 00:01:16,529 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}
+2022-09-22 17:18:18,262 (Class Based view with serialisation) ERROR {'username': [ErrorDetail(string='A user with that username already exists.', code='unique')]}
+2022-09-22 17:18:18,265 django.request WARNING Bad Request: /user/register/
+2022-09-22 17:19:23,152 django.request WARNING Not Found: /favicon.ico
+2022-09-22 17:20:40,377 (CRUD Operation for Note With Authentication) INFO []
+2022-09-22 17:20:40,381 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-22 17:21:07,549 (CRUD Operation for Note With Authentication) INFO {'id': 7, 'title': 'time table', 'description': 'description-1', 'user': 35}
+2022-09-22 17:21:08,631 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note created successfully'}
+2022-09-22 17:21:52,392 (CRUD Operation for Note With Authentication) INFO [OrderedDict([('id', 7), ('title', 'time table'), ('description', 'description-1'), ('user', 35)])]
+2022-09-22 17:21:53,563 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
