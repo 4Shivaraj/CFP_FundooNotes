@@ -16,110 +16,12 @@
 2022-09-15 17:02:13,398 (CRUD Operation for Note) DEBUG {'message': 'Note retrieved successfully'}
 2022-09-15 17:02:49,973 (CRUD Operation for Note) INFO {'id': 3, 'title': 'para-cetomaol-updated', 'description': 'description-updated', 'user': 3}
 2022-09-15 17:02:49,974 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
-2022-09-15 17:03:08,006 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}2022-09-20 19:25:37,318 (Class Based view with serialisation) ERROR User Not Verified
-2022-09-20 19:25:37,319 django.request WARNING Bad Request: /user/login/
-2022-09-20 19:26:11,947 django.request WARNING Not Found: /favicon.ico
-2022-09-20 19:31:22,811 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 19:32:04,474 (CRUD Operation for Note) ERROR {'title': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')], 'user': [ErrorDetail(string='This field is required.', code='required')]}
-2022-09-20 19:32:04,479 django.request WARNING Bad Request: /notes/note/
-2022-09-20 19:33:07,089 (CRUD Operation for Note) ERROR Field.__init__() got an unexpected keyword argument 'id'
-2022-09-20 19:33:09,559 django.request WARNING Bad Request: /notes/note/
-2022-09-20 19:34:47,738 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 19:35:57,916 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 19:36:01,666 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 19:41:49,704 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:17:09,798 (CRUD Operation for Note) ERROR {'title': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')], 'user': [ErrorDetail(string='This field is required.', code='required')]}
-2022-09-20 22:17:11,663 django.request WARNING Bad Request: /notes/note/
-2022-09-20 22:26:54,926 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:51:37,688 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:51:42,725 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:51:50,734 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:53:02,949 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:53:03,508 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:54:38,000 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:54:49,309 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:55:12,920 (CRUD Operation for Note) ERROR 'Request' object has no attribute 'header'
-2022-09-20 22:55:12,922 django.request WARNING Bad Request: /notes/note/
-2022-09-20 22:55:48,049 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:55:48,153 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:56:22,954 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:56:39,289 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:57:09,026 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:57:17,063 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:57:30,324 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:57:40,473 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 22:59:39,318 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:00:03,180 (CRUD Operation for Note) ERROR 'Request' object has no attribute 'header'
-2022-09-20 23:00:03,181 django.request WARNING Bad Request: /notes/note/
-2022-09-20 23:00:17,433 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:00:17,495 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:00:21,245 (CRUD Operation for Note) ERROR JwtService.decode() missing 1 required positional argument: 'self'
-2022-09-20 23:00:21,246 django.request WARNING Bad Request: /notes/note/
-2022-09-20 23:01:39,108 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:01:39,297 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:01:39,464 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:02:31,956 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:02:32,097 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:02:32,110 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:03:25,812 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:03:26,070 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:03:26,224 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:08:57,842 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:08:58,286 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:09:12,527 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:09:13,175 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:10:53,381 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:10:53,605 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:10:53,895 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:12:17,313 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:12:17,824 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:12:32,000 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:12:32,510 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:12:42,494 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:12:42,937 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:13:24,519 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:13:25,064 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:13:39,956 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:13:40,516 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:15:24,527 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:15:25,172 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:15:25,334 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:16:20,752 (CRUD Operation for Note) ERROR JwtService.decode() missing 1 required positional argument: 'self'
-2022-09-20 23:17:15,834 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:17:16,194 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:17:16,392 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:17:27,350 (CRUD Operation for Note) ERROR JwtService.decode() missing 1 required positional argument: 'self'
-2022-09-20 23:17:27,353 django.request WARNING Bad Request: /notes/note/
-2022-09-20 23:17:58,553 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:17:58,564 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:17:59,236 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:19:32,489 (CRUD Operation for Note) ERROR {'title': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}
-2022-09-20 23:19:34,755 django.request WARNING Bad Request: /notes/note/
-2022-09-20 23:27:46,931 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:27:47,102 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:27:47,145 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:27:47,207 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:30:18,259 (CRUD Operation for Note) INFO {'id': 4, 'title': 'time table', 'description': 'description-1', 'user': 32}
-2022-09-20 23:30:20,252 (CRUD Operation for Note) DEBUG {'message': 'Note created successfully'}
-2022-09-20 23:37:24,391 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:37:24,844 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:39:55,300 (CRUD Operation for Note) INFO [OrderedDict([('id', 4), ('title', 'time table'), ('description', 'description-1'), ('user', 32)])]
-2022-09-20 23:39:57,754 (CRUD Operation for Note) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-15 17:03:08,006 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}
+
 2022-09-20 23:48:25,958 (CRUD Operation for Note) INFO [OrderedDict([('id', 4), ('title', 'time table'), ('description', 'description-1'), ('user', 32)])]
 2022-09-20 23:48:26,598 (CRUD Operation for Note) DEBUG {'message': 'Note retrieved successfully'}
-2022-09-20 23:50:18,453 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:50:18,538 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:50:18,842 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:53:02,188 (CRUD Operation for Note) INFO {'id': 4, 'title': 'time_table-updated', 'description': 'description-updated', 'user': 32}
-2022-09-20 23:53:02,190 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
 2022-09-20 23:55:52,292 (CRUD Operation for Note) INFO {'id': 5, 'title': 'time table', 'description': 'description-1', 'user': 32}
 2022-09-20 23:55:53,421 (CRUD Operation for Note) DEBUG {'message': 'Note created successfully'}
 2022-09-20 23:58:45,258 (CRUD Operation for Note) INFO {'id': 4, 'title': '+time_table-updated', 'description': '+description-updated', 'user': 32}
 2022-09-20 23:58:46,018 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
-2022-09-20 23:59:39,749 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:59:39,950 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-20 23:59:40,032 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
 2022-09-21 00:01:16,529 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}
-2022-09-21 00:01:54,122 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-21 00:01:54,590 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
-2022-09-21 00:01:54,929 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
