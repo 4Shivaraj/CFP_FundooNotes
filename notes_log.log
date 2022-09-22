@@ -17,3 +17,11 @@
 2022-09-15 17:02:49,973 (CRUD Operation for Note) INFO {'id': 3, 'title': 'para-cetomaol-updated', 'description': 'description-updated', 'user': 3}
 2022-09-15 17:02:49,974 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
 2022-09-15 17:03:08,006 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}
+
+2022-09-20 23:48:25,958 (CRUD Operation for Note) INFO [OrderedDict([('id', 4), ('title', 'time table'), ('description', 'description-1'), ('user', 32)])]
+2022-09-20 23:48:26,598 (CRUD Operation for Note) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-20 23:55:52,292 (CRUD Operation for Note) INFO {'id': 5, 'title': 'time table', 'description': 'description-1', 'user': 32}
+2022-09-20 23:55:53,421 (CRUD Operation for Note) DEBUG {'message': 'Note created successfully'}
+2022-09-20 23:58:45,258 (CRUD Operation for Note) INFO {'id': 4, 'title': '+time_table-updated', 'description': '+description-updated', 'user': 32}
+2022-09-20 23:58:46,018 (CRUD Operation for Note) DEBUG {'message': 'Note updated successfully'}
+2022-09-21 00:01:16,529 (CRUD Operation for Note) DEBUG {'message': 'Note deleted successfully'}

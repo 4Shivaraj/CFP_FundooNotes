@@ -1,4 +1,3 @@
-from multiprocessing.connection import Client
 from rest_framework.reverse import reverse
 from rest_framework import status
 import pytest
