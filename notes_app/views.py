@@ -5,8 +5,9 @@ from .models import Notes
 from .serializers import NotesSerializers
 from notes_log import get_logger
 from users_app.jwt_service import JwtService
+from notes_app.utils import verify_token
 
-lg = get_logger(name="(CRUD Operation for Note)",
+lg = get_logger(name="(CRUD Operation for Note With Authentication)",
                 file_name="notes_log.log")
 
 """
@@ -17,20 +18,6 @@ this we are accessing to the parameter of the functon below the decorater(child 
 (self and request), when request comes it will hit the decorator first, inside decorator whatever preposseing
 required that will happens and finally it will call the fuction
 """
-
-
-def verify_token(function):
-    def wrapper(self, request):
-        token = request.headers.get("Token")
-        if not token:
-            raise Exception("Token is invalid")
-        decode = JwtService().decode(token=token)
-        user_id = decode.get("user_id")
-        if not user_id:
-            raise Exception("Invalid user")
-        request.data.update({"user": user_id})
-        return function(self, request)
-    return wrapper
 
 
 class NoteAV(APIView):
