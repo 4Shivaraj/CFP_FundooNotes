@@ -34,3 +34,26 @@
 2022-09-22 17:21:08,631 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note created successfully'}
 2022-09-22 17:21:52,392 (CRUD Operation for Note With Authentication) INFO [OrderedDict([('id', 7), ('title', 'time table'), ('description', 'description-1'), ('user', 35)])]
 2022-09-22 17:21:53,563 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-26 14:40:35,012 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\task.py changed, reloading.
+2022-09-26 14:54:21,723 django.request WARNING Not Found: /
+2022-09-26 14:54:21,857 django.request WARNING Not Found: /favicon.ico
+2022-09-26 14:57:02,443 django.request WARNING Method Not Allowed: /user/verify_token/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozNywidXNlcm5hbWUiOiJyYWpzaGl2In0.1D_RgWI7sT19BdG8rjsl1XWH9kxyo17e3anMo4SSai8
+2022-09-26 15:00:25,837 (CRUD Operation for Note With Authentication) INFO {'id': 74, 'title': 'The Management', 'description': 'It is important in every sector', 'user': 37}
+2022-09-26 15:00:25,838 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note created successfully'}
+2022-09-26 15:00:54,199 (CRUD Operation for Note With Authentication) INFO [OrderedDict([('id', 74), ('title', 'The Management'), ('description', 'It is important in every sector'), ('user', 37)])]
+2022-09-26 15:00:54,200 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-26 15:01:25,276 (CRUD Operation for Note With Authentication) ERROR Notes matching query does not exist.
+2022-09-26 15:01:25,277 django.request WARNING Bad Request: /notes/note/
+2022-09-26 15:02:55,855 (CRUD Operation for Note With Authentication) ERROR Notes matching query does not exist.
+2022-09-26 15:02:55,856 django.request WARNING Bad Request: /notes/note/
+2022-09-26 15:03:36,028 (CRUD Operation for Note With Authentication) ERROR Notes matching query does not exist.
+2022-09-26 15:03:36,032 django.request WARNING Bad Request: /notes/note/
+2022-09-26 15:05:33,369 (CRUD Operation for Note With Authentication) INFO {'id': 74, 'title': '+ The Management', 'description': '+ It is important in every sector', 'user': 37}
+2022-09-26 15:05:35,766 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note updated successfully'}
+2022-09-26 15:08:52,478 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note deleted successfully'}
+2022-09-26 15:09:14,780 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
+2022-09-26 16:08:03,391 (CRUD Operation for Note With Authentication) INFO []
+2022-09-26 16:08:03,393 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-26 16:08:08,305 (CRUD Operation for Note With Authentication) INFO {'id': 75, 'title': 'The Management', 'description': 'It is important in every sector', 'user': 37}
+2022-09-26 16:08:08,307 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note created successfully'}
+2022-09-26 16:19:16,061 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\task.py changed, reloading.

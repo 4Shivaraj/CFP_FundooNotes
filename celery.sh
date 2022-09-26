@@ -1,0 +1,1 @@
+python -m celery -A fundoo_notes worker -l info --pool=solo

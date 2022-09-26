@@ -99,7 +99,7 @@ class NoteAV(APIView):
             notes_obj = Notes.objects.get(id=request.data.get("id"))
             notes_obj.delete()
             lg.debug({"message": "Note deleted successfully"})
-            return Response({"message": "Note deleted successfully", "data": {" "}},
+            return Response({"message": "Note deleted successfully", "data": {}},
                             status=status.HTTP_204_NO_CONTENT)  # serializer.data is used for de-serializer
         except Exception as e:
             print(e)

@@ -9,9 +9,10 @@ from notes_log import get_logger
 from .jwt_service import JwtService
 from .models import User
 from fundoo_notes import settings
+from .task import send_email_task
 
 
-lg = get_logger(name="(Class Based view with serialisation)",
+lg = get_logger(name="(Celery)",
                 file_name="notes_log.log")
 
 
@@ -32,17 +33,10 @@ class UserRegistration(APIView):
             serializer = UserSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()  # serializing the data after validation
-            # jwt_encode = JwtService()
             token = JwtService().encode({"user_id": serializer.data.get(
                 "id"), "username": serializer.data.get("username")})
-            send_mail(
-                subject='Json Web Token For User Registration',
-                message=settings.BASE_URL +
-                reverse('verify_token', kwargs={"token": token}),
-                from_email=None,
-                recipient_list=[serializer.data.get('email')],
-                fail_silently=False,
-            )
+            recipient_list = [serializer.data.get('email')]
+            send_email_task.delay(token, recipient_list)
 
             return Response({"message": "Registered successfully", "data": serializer.data},
                             status=status.HTTP_201_CREATED)  # serializer.data is used for de-serializer
