@@ -9,7 +9,7 @@ from notes_log import get_logger
 from .jwt_service import JwtService
 from .models import User
 from fundoo_notes import settings
-
+from .send import Producer
 
 lg = get_logger(name="(Class Based view with serialisation)",
                 file_name="notes_log.log")
@@ -35,15 +35,11 @@ class UserRegistration(APIView):
             # jwt_encode = JwtService()
             token = JwtService().encode({"user_id": serializer.data.get(
                 "id"), "username": serializer.data.get("username")})
-            send_mail(
-                subject='Json Web Token For User Registration',
-                message=settings.BASE_URL +
-                reverse('verify_token', kwargs={"token": token}),
-                from_email=None,
-                recipient_list=[serializer.data.get('email')],
-                fail_silently=False,
-            )
-
+            message = settings.BASE_URL + \
+                reverse('verify_token', kwargs={"token": token})
+            recipent = serializer.data.get('email')
+            Producer().publish(method='send_email',
+                               payload={"recipent": recipent, "message": message})
             return Response({"message": "Registered successfully", "data": serializer.data},
                             status=status.HTTP_201_CREATED)  # serializer.data is used for de-serializer
 
