@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users_app.apps.UsersAppConfig',
     'notes_app.apps.NotesAppConfig',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users_app.User'
 
 
-BASE_URL = 'http://127.0.0.1:9000'
+BASE_URL = 'http://127.0.0.1:8000'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -141,3 +142,14 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = 'vhgmexvejawvsvbu'
+
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Token',
+            'in': 'header'
+        }
+    }
+}

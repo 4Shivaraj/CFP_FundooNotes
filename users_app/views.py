@@ -9,7 +9,8 @@ from notes_log import get_logger
 from .jwt_service import JwtService
 from .models import User
 from fundoo_notes import settings
-
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
 lg = get_logger(name="(Class Based view with serialisation)",
                 file_name="notes_log.log")
@@ -19,7 +20,7 @@ class UserRegistration(APIView):
     """
     inheriting from APIView class this class allows you to access below methods, overiding post method
     """
-
+    @swagger_auto_schema(request_body=UserSerializer, responses={201: 'CREATED', 400: 'BAD REQUEST'})
     def post(self, request):
         """
         Args:
@@ -56,7 +57,13 @@ class UserLogin(APIView):
     """
     inheriting from APIView class
     """
-
+    @swagger_auto_schema(request_body=openapi.Schema(
+        type=openapi.TYPE_OBJECT,
+        properties={
+            'username': openapi.Schema(type=openapi.TYPE_STRING),
+            'password': openapi.Schema(type=openapi.TYPE_STRING)
+        }),
+        responses={202: 'ACCEPTED', 400: 'BAD REQUEST'})
     def post(self, request):
         """
         Args:

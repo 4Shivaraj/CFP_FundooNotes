@@ -34,3 +34,106 @@
 2022-09-22 17:21:08,631 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note created successfully'}
 2022-09-22 17:21:52,392 (CRUD Operation for Note With Authentication) INFO [OrderedDict([('id', 7), ('title', 'time table'), ('description', 'description-1'), ('user', 35)])]
 2022-09-22 17:21:53,563 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-28 03:11:55,373 django.request WARNING Not Found: /
+2022-09-28 03:11:55,508 django.request WARNING Not Found: /favicon.ico
+2022-09-28 03:17:51,124 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
+2022-09-28 03:18:16,112 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
+2022-09-28 03:18:27,948 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
+2022-09-28 03:18:35,065 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\users_app\views.py changed, reloading.
+2022-09-28 03:19:16,742 (Class Based view with serialisation) ERROR {'phone_number': [ErrorDetail(string='Ensure this value is less than or equal to 9223372036854775807.', code='max_value')]}
+2022-09-28 03:19:16,743 django.request WARNING Bad Request: /user/register/
+2022-09-28 03:20:40,130 (Class Based view with serialisation) ERROR User Not Verified
+2022-09-28 03:20:40,132 django.request WARNING Bad Request: /user/login/
+2022-09-28 03:23:05,476 django.request ERROR Internal Server Error: /notes/note/
+Traceback (most recent call last):
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_app\utils.py", line 8, in wrapper
+    raise Exception("Token is invalid")
+Exception: Token is invalid
+2022-09-28 12:39:45,922 django.request WARNING Not Found: /
+2022-09-28 12:39:46,439 django.request WARNING Not Found: /favicon.ico
+2022-09-28 12:40:55,474 django.request ERROR Internal Server Error: /notes/note/
+Traceback (most recent call last):
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_app\utils.py", line 8, in wrapper
+    raise Exception("Token is invalid")
+Exception: Token is invalid
+2022-09-28 12:41:41,801 django.request ERROR Internal Server Error: /notes/note/
+Traceback (most recent call last):
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\CFP_Assignment\CFP_FundooNotes\notes_app\utils.py", line 8, in wrapper
+    raise Exception("Token is invalid")
+Exception: Token is invalid
+2022-09-28 13:05:18,001 (Swagger API) INFO {'id': 76, 'title': 'Calisthenis', 'description': 'The power of enthusiastics', 'user': 62}
+2022-09-28 13:05:18,002 (Swagger API) DEBUG {'message': 'Note created successfully'}
+2022-09-28 13:05:49,256 (Swagger API) INFO [OrderedDict([('id', 76), ('title', 'Calisthenis'), ('description', 'The power of enthusiastics'), ('user', 62)])]
+2022-09-28 13:05:49,257 (Swagger API) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-28 13:07:06,652 (Swagger API) INFO {'id': 76, 'title': '+ Calisthenis', 'description': '+ The power of enthusiastics', 'user': 62}
+2022-09-28 13:07:06,653 (Swagger API) DEBUG {'message': 'Note updated successfully'}
+2022-09-28 13:08:22,132 django.utils.autoreload INFO D:\CFP_Assignment\CFP_FundooNotes\notes_app\views.py changed, reloading.
+2022-09-29 11:39:52,078 django.request WARNING Not Found: /
+2022-09-29 11:39:52,479 django.request WARNING Not Found: /favicon.ico
+2022-09-29 11:48:00,641 (Swagger API) INFO []
+2022-09-29 11:48:00,643 (Swagger API) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-29 11:48:43,612 (Swagger API) INFO {'id': 77, 'title': 'title 1', 'description': 'dscription', 'user': 63}
+2022-09-29 11:48:43,615 (Swagger API) DEBUG {'message': 'Note created successfully'}
+2022-09-29 11:49:01,184 (Swagger API) INFO [OrderedDict([('id', 77), ('title', 'title 1'), ('description', 'dscription'), ('user', 63)])]
+2022-09-29 11:49:01,188 (Swagger API) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-29 11:49:59,439 (Swagger API) INFO {'id': 77, 'title': 'title -1', 'description': 'string', 'user': 63}
+2022-09-29 11:49:59,442 (Swagger API) DEBUG {'message': 'Note updated successfully'}
+2022-09-29 11:50:09,665 (Swagger API) INFO [OrderedDict([('id', 77), ('title', 'title -1'), ('description', 'string'), ('user', 63)])]
+2022-09-29 11:50:09,667 (Swagger API) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-29 11:50:36,905 (Swagger API) DEBUG {'message': 'Note deleted successfully'}
+2022-09-29 11:50:53,712 (Swagger API) INFO []
+2022-09-29 11:50:53,713 (Swagger API) DEBUG {'message': 'Note retrieved successfully'}
+2022-09-29 16:02:14,979 django.request WARNING Not Found: /
+2022-09-29 16:02:17,270 django.request WARNING Not Found: /favicon.ico
+2022-09-29 16:04:44,234 (Class Based view with serialisation) ERROR User Not Verified
+2022-09-29 16:04:44,240 django.request WARNING Bad Request: /user/login/
+2022-09-29 16:06:19,660 (Swagger API) INFO {'id': 78, 'title': 'string1', 'description': 'string2', 'user': 64}
+2022-09-29 16:06:19,663 (Swagger API) DEBUG {'message': 'Note created successfully'}

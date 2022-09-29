@@ -6,25 +6,26 @@ from .serializers import NotesSerializers
 from notes_log import get_logger
 from users_app.jwt_service import JwtService
 from notes_app.utils import verify_token
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
-lg = get_logger(name="(CRUD Operation for Note With Authentication)",
+lg = get_logger(name="(Swagger API)",
                 file_name="notes_log.log")
-
-"""
-Instead of writing the separate function we are using decorator
-decoraters allows to preprocess the function and perform some sort of operation, before the function is executed,
-we are passing the function whatever we written in decorater as a parameter, inside that wrapper function, with
-this we are accessing to the parameter of the functon below the decorater(child function),in this case it is 
-(self and request), when request comes it will hit the decorator first, inside decorator whatever preposseing
-required that will happens and finally it will call the fuction
-"""
 
 
 class NoteAV(APIView):
     """
     inheriting from APIView class this class allows you to access below methods, overiding post method
     """
-    @verify_token
+    @swagger_auto_schema(request_body=openapi.Schema(type=openapi.TYPE_OBJECT,
+                                                     properties={
+                                                         'title': openapi.Schema(type=openapi.TYPE_STRING),
+                                                         'description': openapi.Schema(
+                                                             type=openapi.TYPE_STRING), },
+                                                     required=['title', 'description']),
+                         responses={201: 'CREATED', 400: 'BAD REQUEST'},
+                         operation_summary='create Notes')
+    @ verify_token
     def post(self, request):
         """
         Args:
@@ -45,7 +46,7 @@ class NoteAV(APIView):
             lg.error(e)
             return Response({"message": str(e)}, status=400)
 
-    @verify_token
+    @ verify_token
     def get(self, request):
         """
         Args:
@@ -65,7 +66,17 @@ class NoteAV(APIView):
             lg.error(e)
             return Response({"message": str(e)}, status=400)
 
-    @verify_token
+    @swagger_auto_schema(request_body=openapi.Schema(type=openapi.TYPE_OBJECT,
+                                                     properties={'id': openapi.Schema(type=openapi.TYPE_INTEGER),
+                                                                 'title': openapi.Schema(type=openapi.TYPE_STRING),
+                                                                 'description': openapi.Schema(
+                                                                     type=openapi.TYPE_STRING),
+                                                                 },
+                                                     responses={
+                                                         202: 'ACCEPTED', 400: 'BAD REQUEST'},
+                                                     required=['id', 'title', 'description']),
+                         operation_summary='Update Notes')
+    @ verify_token
     def put(self, request):
         """
         Args:
@@ -87,7 +98,14 @@ class NoteAV(APIView):
             lg.error(e)
             return Response({"message": str(e)}, status=400)
 
-    @verify_token
+    @swagger_auto_schema(request_body=openapi.Schema(type=openapi.TYPE_OBJECT,
+                                                     properties={
+                                                         'id': openapi.Schema(type=openapi.TYPE_INTEGER),
+                                                     },
+                                                     required=['id']),
+                         responses={204: 'NO CONTENT', 400: 'BAD REQUEST'},
+                         operation_summary='delete Notes')
+    @ verify_token
     def delete(self, request):
         """
         Args:
@@ -99,7 +117,7 @@ class NoteAV(APIView):
             notes_obj = Notes.objects.get(id=request.data.get("id"))
             notes_obj.delete()
             lg.debug({"message": "Note deleted successfully"})
-            return Response({"message": "Note deleted successfully", "data": {" "}},
+            return Response({"message": "Note deleted successfully", "data": {}},
                             status=status.HTTP_204_NO_CONTENT)  # serializer.data is used for de-serializer
         except Exception as e:
             print(e)
