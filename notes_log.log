@@ -34,3 +34,4 @@
 2022-09-22 17:21:08,631 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note created successfully'}
 2022-09-22 17:21:52,392 (CRUD Operation for Note With Authentication) INFO [OrderedDict([('id', 7), ('title', 'time table'), ('description', 'description-1'), ('user', 35)])]
 2022-09-22 17:21:53,563 (CRUD Operation for Note With Authentication) DEBUG {'message': 'Note retrieved successfully'}
+
